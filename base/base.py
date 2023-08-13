@@ -69,3 +69,7 @@ class Base():
 
     def find_element_without_wait_and_click(self, xpath):
         return self.driver.find_elements(By.XPATH, xpath)
+
+    def wait_and_complete_element(self, locator, text):
+        """метод ждет инпут на странице пока тот станет каликабельны и заполняет его"""
+        return WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, locator))).send_keys(text)

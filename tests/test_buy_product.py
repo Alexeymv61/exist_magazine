@@ -1,6 +1,5 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 
 from pages.cart_page import Cart_page
 from pages.order_data_page import Order_data_page
