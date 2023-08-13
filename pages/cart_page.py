@@ -7,11 +7,7 @@ class Cart_page(Base):
     # locators
     xpath_button_continue = "//a[contains(@id, 'slbInvokeSubmit')]"
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
-
-    def find_battery_add_to_cart(self):
+    def get_screenshoots_click_cart(self):
         """На странице "корзина" кликаем на кнопку продолжить оформление"""
         self.get_current_url()
         time.sleep(1)

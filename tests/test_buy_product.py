@@ -10,7 +10,7 @@ from pages.authorization_page import Authorization_page
 
 def test_buy_product():
     """расписаны шаги теста в page object style"""
-    driver = webdriver.Chrome(executable_path="/home/abalashov/selenium_course/chromedriver-linux64/chromedriver")
+    driver = webdriver.Chrome(executable_path="../selenium_course/chromedriver-linux64/chromedriver")
 
     print("Старт")
 
@@ -21,17 +21,17 @@ def test_buy_product():
 
     """создание экземпляра класса Product_page"""
     pp = Product_page(driver)
-    """вызов метода find_battery_add_cart"""
+    """вызываем метод find_battery_add_cart() - где ищем аккумулятор и добавляем в корзину"""
     pp.find_battery_add_cart()
 
     """создание экземпляра класса Cart_page"""
     cp = Cart_page(driver)
-    """вызов метода find_battery_add_cart"""
-    cp.find_battery_add_to_cart()
+    """вызываем метод get_screenshoots_click_cart - где делаем скриншоты страницы и кликаем на кнопку прожолжить"""
+    cp.get_screenshoots_click_cart()
 
     """создание экземпляра класса Order_data_page"""
     odp = Order_data_page(driver)
-    """вызов метода find_battery_add_cart"""
+    """вызов метода complete_data_and_click_button, где выбираем способ доставки и делаем скришот страницы, кликаем на кнопку"""
     odp.complete_data_and_click_button()
 
     print("Финиш")

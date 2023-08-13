@@ -13,11 +13,6 @@ class Order_data_page(Base):
     xpath_cart = "//a[@class='shop-functions__cart js-cartfull']"
     xpath_cart_delete_product = "//a[@id='slbDelete']"
 
-
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
-
     def complete_data_and_click_button(self):
         """complete_data_and_click_button - выбираем способ доставки товара, делаем скриин страницы и кликаем на кнопку"""
         self.get_current_url()

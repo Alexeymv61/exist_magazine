@@ -13,10 +13,6 @@ class Authorization_page(Base):
     xpath_world_user_login = "//span[text()='9102736884']"
     xpath_battery_selection = "//a[@id='accumulatory']"
 
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
-
     def fill_login(self, element, login):
         self.get_element(element).send_keys(login)
 

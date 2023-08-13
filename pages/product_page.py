@@ -11,13 +11,9 @@ class Product_page(Base):
     xpath_filter_options = "(//div[@class='h'])[10]"
     xpath_filter_cost = "//a[@id='ctl00_ctl00_b_b_lbSortPrice']"
     xpath_battery = "//p[text()='Exide EK700 ']"
-    xpath_battery_cart = "//a[@id='394085BB_01001304e300cfdc02c915130100c83b_1043_1008']"
+    xpath_battery_cart = "//a[@id='394085BB_01001304e300d6dc02c99c350100aa3b_1043_1008']"
     xpath_battery_name = "//a[@id='ctl00_b_ctl00_hlMainLink']"
     xpath_go_to_cart = "//a[@class='basket added inbasket']"
-
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.driver = driver
 
     """find_battery - ищем аккумулятор, добавляем и переходим в корзину"""
     def find_battery_add_cart(self):
